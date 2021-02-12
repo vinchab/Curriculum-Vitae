@@ -119,6 +119,10 @@
               "devServerTarget": "Curriculum-Vitae:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

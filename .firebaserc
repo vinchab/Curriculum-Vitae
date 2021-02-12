@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-cv-d02c9": {
+      "hosting": {
+        "Curriculum-Vitae": [
+          "my-cv-d02c9"
+        ]
+      }
+    }
+  }
+}
