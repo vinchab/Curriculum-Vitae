@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PersonalInformationComponent } from './components/personal-information/personal-information.component';
 import { TrainingComponent } from './components/training/training.component';
 import { AchievementComponent } from './components/achievement/achievement.component';
+import { ProfessionalExperienceComponent } from './components/professional-experience/professional-experience.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AchievementComponent } from './components/achievement/achievement.compo
     HeaderComponent,
     PersonalInformationComponent,
     TrainingComponent,
-    AchievementComponent
+    AchievementComponent,
+    ProfessionalExperienceComponent
   ],
   imports: [
     BrowserModule,
