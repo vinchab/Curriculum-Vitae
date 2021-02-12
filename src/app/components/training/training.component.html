@@ -2,22 +2,25 @@
     <mat-card-header>
         <mat-card-title>Formations</mat-card-title>
     </mat-card-header>
-    <mat-card-content>
+    <mat-card-content style="display: flex; justify-content: center;">
  
-        <mat-card *ngFor="let data of trainings">
+        <mat-card *ngFor="let data of trainings" style="max-width: 500px; margin-right: 15px;">
             <mat-card-header>
                 <mat-card-title>{{ data.title }}</mat-card-title>
             </mat-card-header>
 
             
 
-            <mat-card-content>
-                
-                <span>{{ data.dateStart }} - {{ data.dateEnd }}</span>
-                <p>{{ data.description }}</p>
-                <img [src]="data.imgUrl" alt="" style="max-width: 10%;">
+            <mat-card-content style="display: flex; justify-content: flex-start;">
+                <img  [src]="data.imgUrl" alt="" style="max-width: 20%; margin-right: 10px;">
+                <div>
+                    <span>{{ data.dateStart }} - {{ data.dateEnd }}</span>
+                    <p>{{ data.description }}</p>
+                </div>
             </mat-card-content>
+            <mat-card-footer style="margin-bottom: 2px;">
+                <button mat-raised-button color="primary" style="margin-left: 15px;">Voir le document</button>
+            </mat-card-footer>
         </mat-card>
-
     </mat-card-content>
 </mat-card>

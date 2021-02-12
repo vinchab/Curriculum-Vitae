@@ -15,6 +15,6 @@ export class TrainingService {
   ) { }
 
   getAllTrainings(){
-    return this._afs.collection<ITraining>(this._urlBase, ref => ref.orderBy('dateStart', 'asc'))
+    return this._afs.collection<ITraining>(this._urlBase, ref => ref.orderBy('title', 'asc'))
   }
 }

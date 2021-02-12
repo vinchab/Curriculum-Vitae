@@ -19,6 +19,7 @@ import { ProfessionalExperienceComponent } from './components/professional-exper
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatToolbarModule,
     MatCardModule,
     MatTabsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
