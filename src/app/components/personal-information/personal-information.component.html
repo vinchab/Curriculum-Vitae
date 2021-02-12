@@ -7,15 +7,16 @@
 
     <mat-card-content>
         
-        <span>{{ data.gender}} {{ data.name}} {{ data.firstname}}</span><br>
-        <span>Adresse: {{ data.street }}, {{ data.npa }} {{ data.city }}, {{ data.country }}</span><br><br>
-        <span>Email: {{ data.email }}</span><br>
-        <span>Numéro de téléphone: {{ data.phone }}</span><br>
-        <span>Numéro de mobile: {{ data.mobile}}</span><br><br>
-        <span>Date de naissance: {{ data.days }} {{ data.mount }} {{ data.year }}</span><br>
-        <span>Nationalité: {{ data.nationalitie }}</span><br><br>
+        <h2>{{ data.gender}} {{ data.name}} {{ data.firstname}}</h2><br>
         
-        <h3>Présentation</h3>
+        <div class="details"><h3 class="title">Adresse:</h3> <span>{{ data.street }}, {{ data.npa }} {{ data.city }}, {{ data.country }}</span></div>
+        <div class="details"><h3 class="title">Email:</h3> <span>{{ data.email }}</span></div>
+        <div class="details"><h3 class="title">Numéro de téléphone:</h3><span>{{ data.phone }}</span></div>
+        <div class="details"><h3 class="title">Numéro de mobile:</h3><span>{{ data.mobile}}</span></div>
+        <div class="details"><h3 class="title">Date de naissance:</h3><span>{{ data.days }} {{ data.mount }} {{ data.year }}</span></div>
+        <div class="details"><h3 class="title">Nationalité:</h3><span>{{ data.nationalitie }}</span></div>
+        
+        <h3>Présentation:</h3>
         <div *ngFor="let line of presentation">
             <p>{{ line }}.</p>
         </div>
