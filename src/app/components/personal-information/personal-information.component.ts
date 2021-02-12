@@ -10,24 +10,25 @@ import { PersonalInformationService } from 'src/app/shared/services/personal-inf
   styleUrls: ['./personal-information.component.css']
 })
 export class PersonalInformationComponent implements OnInit {
-  public personalCollection: AngularFirestoreCollection<IPersonalInformation>
-  public sub: Subscription
   public personalInformation: IPersonalInformation[] = []
   public presentation = []
+
+  private _personalCollection: AngularFirestoreCollection<IPersonalInformation>
+  private _sub: Subscription
   
   constructor(
     private _personalInfoService: PersonalInformationService
   ) { }
 
   async ngOnInit() {
-    this.personalCollection = await this._personalInfoService.getAllPersonalInformation()
+    this._personalCollection = await this._personalInfoService.getAllPersonalInformation()
 
-    this.sub = this.personalCollection.valueChanges({ idField: 'id'}).subscribe(data => {
+    this._sub = this._personalCollection.valueChanges({ idField: 'id'}).subscribe(data => {
       
       this.personalInformation = data
 
       for (const iterator of this.personalInformation) {
-        this.presentation = iterator.presentation.split(". ")
+        this.presentation = iterator.presentation.split(".")
       }
     })
   }

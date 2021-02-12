@@ -3,38 +3,21 @@
         <mat-card-title>Formations</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        
-        <mat-card>
+ 
+        <mat-card *ngFor="let data of trainings">
             <mat-card-header>
-                <mat-card-title>Diplôme</mat-card-title>
+                <mat-card-title>{{ data.title }}</mat-card-title>
             </mat-card-header>
+
+            
+
             <mat-card-content>
-                text pour le diplôme
+                
+                <span>{{ data.dateStart }} - {{ data.dateEnd }}</span>
+                <p>{{ data.description }}</p>
+                <img [src]="data.imgUrl" alt="" style="max-width: 10%;">
             </mat-card-content>
         </mat-card>
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title>Certificat</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                text pour le certifcat
-            </mat-card-content>
-        </mat-card>
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title>Certificat</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                text pour le certifcat
-            </mat-card-content>
-        </mat-card>
-        <mat-card>
-            <mat-card-header>
-                <mat-card-title>Certificat</mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                text pour le certificat
-            </mat-card-content>
-        </mat-card>
+
     </mat-card-content>
 </mat-card>

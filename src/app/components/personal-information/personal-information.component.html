@@ -2,7 +2,11 @@
     <mat-card-header>
         <mat-card-title>Information Personelle</mat-card-title>
     </mat-card-header>
+
+    <img [src]="data.imgUrl" alt="" style="max-width: 10%; border-radius: 50%; position: fixed; right: 120px;">
+
     <mat-card-content>
+        
         <span>{{ data.gender}} {{ data.name}} {{ data.firstname}}</span><br>
         <span>Adresse: {{ data.street }}, {{ data.npa }} {{ data.city }}, {{ data.country }}</span><br><br>
         <span>Email: {{ data.email }}</span><br>

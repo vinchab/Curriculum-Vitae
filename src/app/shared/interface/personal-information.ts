@@ -13,5 +13,6 @@ export interface IPersonalInformation {
     city: string,
     npa: number,
     country: string,
-    presentation: string
+    presentation: string,
+    imgUrl: string
 }
