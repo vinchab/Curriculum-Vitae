@@ -7,13 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { PersonalInformationComponent } from './components/personal-information/personal-information.component';
 import { TrainingComponent } from './components/training/training.component';
+import { AchievementComponent } from './components/achievement/achievement.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PersonalInformationComponent,
-    TrainingComponent
+    TrainingComponent,
+    AchievementComponent
   ],
   imports: [
     BrowserModule,
