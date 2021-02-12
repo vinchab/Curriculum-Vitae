@@ -1,1 +1,19 @@
-<p>personal-information works!</p>
+<mat-card class="card" *ngFor="let data of personalInformation">
+    <mat-card-header>
+        <mat-card-title>Information Personelle</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <span>{{ data.gender}} {{ data.name}} {{ data.firstname}}</span><br>
+        <span>Adresse: {{ data.street }}, {{ data.npa }} {{ data.city }}, {{ data.country }}</span><br><br>
+        <span>Email: {{ data.email }}</span><br>
+        <span>Numéro de téléphone: {{ data.phone }}</span><br>
+        <span>Numéro de mobile: {{ data.mobile}}</span><br><br>
+        <span>Date de naissance: {{ data.days }} {{ data.mount }} {{ data.year }}</span><br>
+        <span>Nationalité: {{ data.nationalitie }}</span><br><br>
+        
+        <h3>Présentation</h3>
+        <div *ngFor="let line of presentation">
+            <p>{{ line }}.</p>
+        </div>
+    </mat-card-content>
+</mat-card>

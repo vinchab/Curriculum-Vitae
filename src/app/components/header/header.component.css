@@ -1,0 +1,16 @@
+.header {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.logo-angular {
+    width: 26px;
+}
+
+.title {
+    width: 300px;
+    margin-left: 5px;
+}

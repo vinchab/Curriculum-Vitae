@@ -15,6 +15,11 @@ import { TrainingComponent } from './components/training/training.component';
 import { AchievementComponent } from './components/achievement/achievement.component';
 import { ProfessionalExperienceComponent } from './components/professional-experience/professional-experience.component';
 
+//ANGULAR MATERIAL
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +34,10 @@ import { ProfessionalExperienceComponent } from './components/professional-exper
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
