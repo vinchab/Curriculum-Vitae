@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Subscription } from 'rxjs';
 import { ITraining } from '../interface/training';
 
 @Injectable({
@@ -8,7 +7,6 @@ import { ITraining } from '../interface/training';
 })
 export class TrainingService {
   private _urlBase: string = 'training'
-  private _sub: Subscription
 
   constructor(
     private _afs: AngularFirestore
