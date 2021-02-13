@@ -8,6 +8,7 @@
             <mat-card-header>
                 <mat-card-title>{{ data.title }}</mat-card-title>
             </mat-card-header>
+            <img mat-card-image [src]="data.imgUrl" [alt]="data.title">
             <mat-card-content>
                 <p>{{ data.description }}</p>
                 <span>Réalisé en : {{ data.date }}</span>

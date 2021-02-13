@@ -13,6 +13,6 @@ export class AchievementService {
   ) { }
 
   getAllAchievements(){
-    return this._afs.collection<IAchievement>(this._urlBase, ref => ref.orderBy('date', 'asc'))
+    return this._afs.collection<IAchievement>(this._urlBase, ref => ref.orderBy('date', 'desc'))
   }
 }
