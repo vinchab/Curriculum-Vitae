@@ -10,6 +10,7 @@ import { TrainingService } from 'src/app/shared/services/training.service';
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent implements OnInit {
+  public title: string = "Diplôme et Certification"
   public trainings: ITraining[] = []
 
   private _trainingCollection: AngularFirestoreCollection<ITraining>
