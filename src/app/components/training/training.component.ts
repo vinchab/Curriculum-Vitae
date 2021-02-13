@@ -19,12 +19,12 @@ export class TrainingComponent implements OnInit {
     private _trainingService: TrainingService
   ) { }
 
-  ngOnInit(): void {
-    this._trainingCollection = this._trainingService.getAllTrainings()
+  async ngOnInit() {
+    this._trainingCollection = await this._trainingService.getAllTrainings()
 
     this._sub = this._trainingCollection.valueChanges({ idField: 'id'}).subscribe(data => {
       this.trainings = data
     })
   }
-  
+
 }

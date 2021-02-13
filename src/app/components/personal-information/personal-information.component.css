@@ -2,8 +2,17 @@
     display: flex; 
     justify-content: flex-start; 
     align-items: center;
+    height: 25px;
 }
 
 .title {
     margin-right: 10px;
+}
+
+.personal-image {
+    max-width: 20%;
+    border-radius: 50%;
+    border: #3f51b5 solid 2px;
+    position: absolute;
+    right: 15px;
 }

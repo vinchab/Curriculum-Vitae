@@ -1,13 +1,13 @@
-<mat-card class="card" *ngFor="let data of personalInformation">
-    <mat-card-header>
+<mat-card class="card" *ngFor="let data of personalInformation" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+    <!-- <mat-card-header>
         <mat-card-title>Information Personelle</mat-card-title>
-    </mat-card-header>
+    </mat-card-header> -->
 
-    <img [src]="data.imgUrl" alt="" style="max-width: 10%; border-radius: 50%; position: fixed; right: 120px;">
+    
 
     <mat-card-content>
-        
-        <h2>{{ data.gender}} {{ data.name}} {{ data.firstname}}</h2><br>
+        <img [src]="data.imgUrl" alt="" class="personal-image">
+        <h2>{{ data.gender}} {{ data.name}} {{ data.firstname}}</h2>
         
         <div class="details"><h3 class="title">Adresse:</h3> <span>{{ data.street }}, {{ data.npa }} {{ data.city }}, {{ data.country }}</span></div>
         <div class="details"><h3 class="title">Email:</h3> <span>{{ data.email }}</span></div>

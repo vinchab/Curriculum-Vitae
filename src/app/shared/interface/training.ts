@@ -3,5 +3,6 @@ export interface ITraining {
     dateEnd: Date,
     title: string,
     description: string,
-    imgUrl: string
+    imgUrl: string,
+    school: string,
 }
