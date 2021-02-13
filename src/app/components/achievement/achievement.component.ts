@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestoreCollection } from '@angular/fire/firestore';
+import { Subscription } from 'rxjs';
+import { IAchievement } from 'src/app/shared/interface/achievement';
+import { AchievementService } from 'src/app/shared/services/achievement.service';
 
 @Component({
   selector: 'app-achievement',
@@ -6,10 +10,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./achievement.component.css']
 })
 export class AchievementComponent implements OnInit {
+  public archievements: IAchievement[] = []  
 
-  constructor() { }
+  private _archievementCollection: AngularFirestoreCollection<IAchievement>
+  private _sub: Subscription
 
-  ngOnInit(): void {
+  constructor(
+    private _achievementService: AchievementService
+  ) { }
+
+  async ngOnInit() {
+    this._archievementCollection = await this._achievementService.getAllAchievements()
+
+    this._sub = this._archievementCollection.valueChanges({ idField: 'id'}).subscribe(data => {
+      this.archievements = data
+    })
   }
 
 }
