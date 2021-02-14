@@ -1,2 +1,5 @@
-export interface Carousel {
+export interface ICarousel {
+    index: number,
+    url: string,
+    title: string
 }

@@ -30,6 +30,7 @@ h3 {
 
 /*CAROUSEL*/
 .carousel-slide-content {
+    top: 63px;
     position: relative !important;
 
 }
