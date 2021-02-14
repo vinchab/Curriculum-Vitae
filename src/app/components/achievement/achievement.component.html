@@ -4,15 +4,16 @@
     </mat-card-header>
     <mat-card-content style="display: flex; justify-content: center; flex-wrap: wrap;">
         
-        <mat-card *ngFor="let data of archievements" style="width: 500px; margin-right: 15px; margin-bottom: 15px;">
-            <mat-card-header>
-                <mat-card-title>{{ data.title }}</mat-card-title>
-            </mat-card-header>
-            <img mat-card-image [src]="data.imgUrl" [alt]="data.title">
+        <mat-card *ngFor="let data of archievements" style="width: 500px; margin-left: 15px; margin-right: 15px; margin-bottom: 30px;">
+            <img mat-card-image [src]="data.imgUrl" [alt]="data.title" class="img-shadow">
+            
+            <mat-card-title class="title">{{ data.title }}</mat-card-title>
+            
             <mat-card-content>
-                <p>{{ data.description }}</p>
                 <span>Réalisé en : {{ data.date }}</span>
+                <p>{{ data.description }}</p>
             </mat-card-content>
+            
             <mat-card-footer style="margin-bottom: 2px;">
                 <a [href]="data.url" style="margin-left: 15px;">Voir...</a>
             </mat-card-footer>

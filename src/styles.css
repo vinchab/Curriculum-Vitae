@@ -24,3 +24,6 @@ h2 {
 h3 {
     font-family: 'Open Sans', sans-serif;
 }
+.mat-card-header-text {
+    margin: 0 !important;
+}
