@@ -1,5 +1,9 @@
 <app-header></app-header>
-<!-- <img src="../assets/slide-2.jpg" style="width: 1280px; margin-left: auto; margin-right: auto; display: block; position: relative; top:63px;"> -->
+
+<!-- <mat-carousel timings="500ms ease-out" [autoplay]="true" interval="6000" color="white">
+  <mat-carousel-slide *ngFor="let slide of slides; let i = index" [image]="slide.image" overlayColor="#ffffff" [hideOverlay]="false"></mat-carousel-slide>
+</mat-carousel> -->
+
 <mat-tab-group mat-align-tabs="center" style="top: 63px; position: relative;">
   <mat-tab label="Information Personel"><app-personal-information></app-personal-information></mat-tab>
   <mat-tab label="Formations"><app-training></app-training></mat-tab>

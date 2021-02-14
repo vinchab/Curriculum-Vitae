@@ -27,3 +27,12 @@ h3 {
 .mat-card-header-text {
     margin: 0 !important;
 }
+
+/*CAROUSEL*/
+.carousel-slide-content {
+    position: relative !important;
+
+}
+div.carousel {
+    height: 30% !important;
+}
