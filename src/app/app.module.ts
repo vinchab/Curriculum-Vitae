@@ -22,6 +22,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     PersonalInformationComponent,
     TrainingComponent,
     AchievementComponent,
-    ProfessionalExperienceComponent
+    ProfessionalExperienceComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
