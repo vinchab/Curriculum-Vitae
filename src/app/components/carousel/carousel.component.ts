@@ -26,10 +26,10 @@ export class CarouselComponent implements OnInit {
       .valueChanges({ idField: 'id'})
       .subscribe(data => {
         for (const iterator of data) {
-          let image = {'image': iterator.url, 'title': iterator.title }
-          
-          this.slides.push(image)
+          this.slides.push({'image': iterator.url, 'title': iterator.title })
         }
+
+        this._sub.unsubscribe()
     })
   }
 
