@@ -14,6 +14,7 @@ import { PersonalInformationComponent } from './components/personal-information/
 import { TrainingComponent } from './components/training/training.component';
 import { AchievementComponent } from './components/achievement/achievement.component';
 import { ProfessionalExperienceComponent } from './components/professional-experience/professional-experience.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 //ANGULAR MATERIAL
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -22,8 +23,6 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
-import { CarouselComponent } from './components/carousel/carousel.component';
-
 
 @NgModule({
   declarations: [
