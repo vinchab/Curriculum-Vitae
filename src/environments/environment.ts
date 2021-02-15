@@ -11,7 +11,7 @@ export const environment = {
     projectId: "my-cv-d02c9",
     storageBucket: "my-cv-d02c9.appspot.com",
     messagingSenderId: "363874898860",
-    appId: "1:363874898860:web:fdd38d087af33cbda76009"
+    appId: "1:363874898860:web:fdd38d087af33cbda76009",
   }
 };
 
