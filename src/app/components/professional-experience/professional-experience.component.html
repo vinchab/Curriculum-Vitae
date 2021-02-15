@@ -1,8 +1,14 @@
-<mat-card class="card">
+<mat-card class="card" style="max-width: 1240px; margin-left: auto; margin-right: auto;">
     <mat-card-header>
         <mat-card-title>Expérience Professionnelle</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-
+        <mat-card *ngFor="let experience of experiences" style="width: 500px; margin-left: 15px; margin-right: 15px; margin-bottom: 30px;">
+            <mat-card-title class="title">{{ experience.title }}</mat-card-title>
+            <mat-card-content>
+                <span>De: {{ experience.mountStart}} {{ experience.yearStart}} à {{ experience.mountEnd}} {{ experience.yearEnd}}</span>
+                <p>{{ experience.description }}</p>
+            </mat-card-content>
+        </mat-card>
     </mat-card-content>
 </mat-card>

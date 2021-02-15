@@ -25,6 +25,8 @@ export class TrainingComponent implements OnInit {
 
     this._sub = this._trainingCollection.valueChanges({ idField: 'id'}).subscribe(data => {
       this.trainings = data
+
+      this._sub.unsubscribe()
     })
   }
 

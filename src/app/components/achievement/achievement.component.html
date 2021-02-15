@@ -15,7 +15,7 @@
             </mat-card-content>
             
             <mat-card-footer style="margin-bottom: 2px;">
-                <a [href]="data.url" style="margin-left: 15px;">Voir...</a>
+                <a *ngIf="data.url" [href]="data.url" style="margin-left: 15px;">Voir...</a>
             </mat-card-footer>
         </mat-card>
 

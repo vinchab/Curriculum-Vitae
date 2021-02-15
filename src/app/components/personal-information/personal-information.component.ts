@@ -30,6 +30,8 @@ export class PersonalInformationComponent implements OnInit {
       for (const iterator of this.personalInformation) {
         this.presentation = iterator.presentation.split(".")
       }
+
+      this._sub.unsubscribe()
     })
   }
 

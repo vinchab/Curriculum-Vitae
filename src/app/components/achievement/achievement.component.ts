@@ -24,6 +24,8 @@ export class AchievementComponent implements OnInit {
 
     this._sub = this._archievementCollection.valueChanges({ idField: 'id'}).subscribe(data => {
       this.archievements = data
+
+      this._sub.unsubscribe()
     })
   }
 
