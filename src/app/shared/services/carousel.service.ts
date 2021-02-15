@@ -15,6 +15,6 @@ export class CarouselService {
   ) { }
 
   getAllImages(){
-    return this._afs.collection<ICarousel>(this._urlBase, ref => ref.orderBy('index', 'asc'))
+    return this._afs.collection<ICarousel>(this._urlBase, ref => ref.orderBy('index', 'desc'))
   }
 }

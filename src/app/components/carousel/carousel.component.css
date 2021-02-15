@@ -1,3 +1,19 @@
+.carousel {
+    position: relative; 
+    top: 64px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    display: block; 
+    width: 1280px;
+}
 .carousel-title {
     color: white;
+}
+
+
+@media (max-width: 1024px) {
+    .carousel {
+        width: 100%;
+        top: 55px; 
+    }
 }

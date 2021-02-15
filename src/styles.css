@@ -12,15 +12,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background:
     margin-right: 50px;
 }
 
-app-root {
-    background: black;
-}
-
 h2 {
     font-family: 'Titillium Web', sans-serif;
     font-size: 27px;
 }
-
 h3 {
     font-family: 'Open Sans', sans-serif;
 }
@@ -28,11 +23,24 @@ h3 {
     margin: 0 !important;
 }
 
-/*CAROUSEL*/
-.carousel-slide-content {
-    top: 63px;
-    position: relative !important;
+
+/*carousel arrow*/
+.mat-icon-button.mat-accent {
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    background-color: #3f51b5c4;
+    box-shadow: 0px 1px 1px rgba(70, 69, 69, 0.692);
 }
-div.carousel {
-    height: 30% !important;
+.mat-icon-button.mat-accent.mat-button-disabled, .mat-icon-button.mat-warn.mat-button-disabled, .mat-icon-button.mat-button-disabled.mat-button-disabled {
+    display: none;
+}
+
+/*carousel indicators*/
+.mat-mini-fab.mat-button-disabled.mat-button-disabled {
+    background-color: rgb(1, 255, 148);    
+}
+.mat-mini-fab.mat-accent {
+    background-color: #dfd8d9ab;
 }

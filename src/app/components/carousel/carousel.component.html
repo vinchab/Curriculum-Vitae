@@ -1,5 +1,24 @@
-<mat-carousel timings="500ms ease-out" [autoplay]="true" interval="6000" color="white">
-    <mat-carousel-slide *ngFor="let slide of slides; let i = index" [image]="slide.image" overlayColor="#ffffff" [hideOverlay]="false"> 
-        <h1 class="carousel-title">{{ slide.title }}</h1>
+<div class="carousel">
+<mat-carousel *ngIf="isCarousel"
+    timings="500ms ease-in"
+    [autoplay]="true"
+    interval="7000"
+    color="accent"
+    maxWidth="1280px"
+    proportion="20"
+    [loop]="false"
+    [hideArrows]="true"
+    [hideIndicators]="false"
+    [useKeyboard]="true"
+    [useMouseWheel]="true"
+    orientation="ltr"
+>
+    <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index"
+        [image]="slide.image"
+        overlayColor="#00000080"
+        [hideOverlay]="false"
+    > 
+        <h1 *ngIf="displayTitle" class="carousel-title">{{ slide.title }}</h1>
     </mat-carousel-slide>
 </mat-carousel>
+</div>

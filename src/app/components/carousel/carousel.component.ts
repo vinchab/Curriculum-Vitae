@@ -10,7 +10,9 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  public slides = []
+  public slides: any[] = []
+  public isCarousel : boolean = false
+  public displayTitle: boolean = false
 
   private _carouselCollection: AngularFirestoreCollection<ICarousel>
   private _sub: Subscription
@@ -25,6 +27,10 @@ export class CarouselComponent implements OnInit {
     this._sub = this._carouselCollection
       .valueChanges({ idField: 'id'})
       .subscribe(data => {
+        if (data.length > 0) {
+          this.isCarousel = true
+        }
+
         for (const iterator of data) {
           this.slides.push({'image': iterator.url, 'title': iterator.title })
         }
