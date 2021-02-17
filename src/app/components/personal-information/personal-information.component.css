@@ -3,6 +3,13 @@
     justify-content: flex-start; 
     align-items: center;
     height: 25px;
+    margin-bottom: 10px;
+}
+.mat-icon-color {
+    color: #3f51b5;
+}
+.details-text {
+    margin-left: 5px;
 }
 
 .title {

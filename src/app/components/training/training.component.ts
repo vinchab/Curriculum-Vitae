@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestoreCollection } from '@angular/fire/firestore';
+import { MatDialog } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { ITraining } from 'src/app/shared/interface/training';
 import { TrainingService } from 'src/app/shared/services/training.service';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-training',
@@ -10,14 +12,16 @@ import { TrainingService } from 'src/app/shared/services/training.service';
   styleUrls: ['./training.component.css']
 })
 export class TrainingComponent implements OnInit {
-  public title: string = "Diplôme et Certification"
+  public title: string = "Diplôme et Certificat"
+  public imgUrl: string
   public trainings: ITraining[] = []
 
   private _trainingCollection: AngularFirestoreCollection<ITraining>
   private _sub: Subscription
 
   constructor(
-    private _trainingService: TrainingService
+    private _trainingService: TrainingService,
+    public dialog: MatDialog
   ) { }
 
   async ngOnInit() {
@@ -30,4 +34,9 @@ export class TrainingComponent implements OnInit {
     })
   }
 
+  openDialog(img: string): void {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: {imgUrl: img}
+    });
+  }
 }

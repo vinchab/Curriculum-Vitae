@@ -2,9 +2,9 @@
     <mat-card-header>
         <mat-card-title>Réalisations</mat-card-title>
     </mat-card-header>
-    <mat-card-content style="display: flex; justify-content: center; flex-wrap: wrap;">
+    <mat-card-content style="display: flex; justify-content: space-around; flex-wrap: wrap;">
         
-        <mat-card *ngFor="let data of archievements" style="width: 500px; margin-left: 15px; margin-right: 15px; margin-bottom: 30px;">
+        <mat-card *ngFor="let data of archievements" style="width: 500px; margin-top: 25px; margin-bottom: 25px;">
             <img mat-card-image [src]="data.imgUrl" [alt]="data.title" class="img-shadow">
             
             <mat-card-title class="title">{{ data.title }}</mat-card-title>
@@ -15,7 +15,16 @@
             </mat-card-content>
             
             <mat-card-footer style="margin-bottom: 2px;">
-                <a *ngIf="data.url" [href]="data.url" style="margin-left: 15px;">Voir...</a>
+                <a *ngIf="data.url" [href]="data.url" target="_blank" style="margin-left: 15px;">Voir...</a>
+                
+                <div *ngIf="data.githubUrl" style="margin-top: 10px;">
+                    <div *ngIf="data.githubPrivate === false else private">
+                        <a [href]="data.githubUrl" target="_blank" style="margin-left: 15px;">Github</a>
+                    </div>
+                    <ng-template #private>
+                        <span style="margin-left: 15px;">Projet non dispnible au domaine public</span>
+                    </ng-template>
+                </div>
             </mat-card-footer>
         </mat-card>
 

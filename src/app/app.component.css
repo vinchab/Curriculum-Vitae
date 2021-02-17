@@ -1,0 +1,15 @@
+.cdk-overlay-pane {
+    width: 900px !important;
+}
+.mat-dialog-container {
+    width: 800px !important;
+}
+
+@media (max-width: 1024px){
+    .label {
+        display: none;
+    }
+    .mat-tab-header-pagination-chevron{
+        display: none;
+    }
+}

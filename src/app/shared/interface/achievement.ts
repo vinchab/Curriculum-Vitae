@@ -3,5 +3,7 @@ export interface IAchievement {
     description: string,
     url: string,
     imgUrl: string,
-    date: number
+    date: number,
+    githubUrl: string,
+    githubPrivate : boolean
 }

@@ -3,8 +3,35 @@
 <app-carousel ></app-carousel>
 
 <mat-tab-group mat-align-tabs="center" style="top: 63px; position: relative;">
-  <mat-tab label="Information Personel"><app-personal-information></app-personal-information></mat-tab>
-  <mat-tab label="Formations"><app-training></app-training></mat-tab>
-  <mat-tab label="Réalisations"><app-achievement></app-achievement></mat-tab>
-  <mat-tab label="Expérience Professionnelle"><app-professional-experience></app-professional-experience></mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>face</mat-icon>
+      <p style="margin-left: 5px;" class="label">Information Personnel</p>
+    </ng-template>
+    <app-personal-information></app-personal-information>
+    <app-training></app-training>
+  </mat-tab>
+  
+  <!-- <mat-tab label="Formations">
+    <ng-template mat-tab-label>
+      <mat-icon class="material-icons-outlined">cloud</mat-icon>
+      <p style="margin-left: 5px;" class="label">Formations</p>
+    </ng-template>
+    <app-training></app-training>
+  </mat-tab> -->
+  
+  <mat-tab label="Réalisations professionnelles">
+    <ng-template mat-tab-label>
+      <mat-icon class="material-icons-outlined">task</mat-icon>
+      <p style="margin-left: 5px;" class="label">Réalisations professionnelles</p>
+    </ng-template>
+    <app-achievement></app-achievement>
+  </mat-tab>
+  
+  <mat-tab label="Expérience Professionnelle">
+    <ng-template mat-tab-label>
+      <mat-icon>work_outline</mat-icon>
+      <p style="margin-left: 5px;" class="label">Expériences professionnelles</p>
+    </ng-template>
+    <app-professional-experience></app-professional-experience></mat-tab>
 </mat-tab-group>

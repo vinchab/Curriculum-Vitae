@@ -21,8 +21,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { DialogComponent } from './components/dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     TrainingComponent,
     AchievementComponent,
     ProfessionalExperienceComponent,
-    CarouselComponent
+    CarouselComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +49,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     MatTabsModule,
     MatButtonModule,
     MatCarouselModule.forRoot(),
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

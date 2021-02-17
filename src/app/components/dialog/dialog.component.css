@@ -1,0 +1,9 @@
+.img-dialog {
+    width: 800px;
+}
+
+@media (max-width: 1024px) {
+    .img-dialog {
+        width: 100%;
+    }
+}

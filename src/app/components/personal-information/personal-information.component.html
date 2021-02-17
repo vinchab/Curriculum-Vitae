@@ -3,12 +3,30 @@
         <img [src]="data.imgUrl" alt="" class="personal-image">
         <h2>{{ data.firstname}} {{ data.name}}</h2>
         
-        <div class="details"><h3 class="title">Adresse:</h3> <span>{{ data.street }}, {{ data.npa }} {{ data.city }}, {{ data.country }}</span></div>
-        <div class="details"><h3 class="title">Email:</h3> <span>{{ data.email }}</span></div>
-        <div class="details"><h3 class="title">Numéro de téléphone:</h3><span>{{ data.phone }}</span></div>
-        <div class="details"><h3 class="title">Numéro de mobile:</h3><span>{{ data.mobile}}</span></div>
-        <div class="details"><h3 class="title">Date de naissance:</h3><span>{{ data.days }} {{ data.mount }} {{ data.year }}</span></div>
-        <div class="details"><h3 class="title">Nationalité:</h3><span>{{ data.nationalitie }}</span></div>
+        <div class="details">
+            <mat-icon class="mat-icon-color">home</mat-icon>
+            <span class="details-text">{{ data.street }}, {{ data.npa }} {{ data.city }}, {{ data.country }}</span>
+        </div>
+        <div class="details">
+            <mat-icon class="mat-icon-color">alternate_email</mat-icon> 
+            <span class="details-text">{{ data.email }}</span>
+        </div>
+        <div class="details">
+            <mat-icon class="mat-icon-color">call</mat-icon>
+            <span class="details-text">{{ data.phone }}</span>
+        </div>
+        <div class="details">
+            <mat-icon class="mat-icon-color">smartphone</mat-icon>
+            <span class="details-text">{{ data.mobile}}</span>
+        </div>
+        <div class="details">
+            <h3 class="title">Date de naissance:</h3>
+            <span>{{ data.days }} {{ data.mount }} {{ data.year }}</span>
+        </div>
+        <div class="details">
+            <h3 class="title">Nationalité</h3>
+            <span>{{ data.nationalitie }}</span>
+        </div>
         
         <h3>Présentation:</h3>
         <div *ngFor="let line of presentation">
