@@ -26,6 +26,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { DialogComponent } from './components/dialog/dialog.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { DialogComponent } from './components/dialog/dialog.component';
     MatButtonModule,
     MatCarouselModule.forRoot(),
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
