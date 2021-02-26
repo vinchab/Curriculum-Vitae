@@ -17,12 +17,13 @@
             <mat-card-footer style="margin-bottom: 2px;">
                 <a *ngIf="data.url" [href]="data.url" target="_blank" style="margin-left: 15px;">Voir...</a>
                 
-                <div *ngIf="data.githubUrl" style="margin-top: 10px;">
+                <div *ngIf="data.githubUrl" style="margin-top: 10px; display: flex; align-items: center;">                    
+                    <img src="../../../assets/github-black.png" style="width: 40px;">
                     <div *ngIf="data.githubPrivate === false else private">
-                        <a [href]="data.githubUrl" target="_blank" style="margin-left: 15px;">Github</a>
+                        <a [href]="data.githubUrl" target="_blank">Github</a>
                     </div>
                     <ng-template #private>
-                        <span style="margin-left: 15px;">Projet non dispnible au domaine public</span>
+                        <span>Repositories privé, merci de me demander un invitation</span>
                     </ng-template>
                 </div>
             </mat-card-footer>
